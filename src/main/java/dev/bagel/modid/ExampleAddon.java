@@ -1,4 +1,4 @@
-package btw.community.example;
+package dev.bagel.modid;
 
 import api.AddonHandler;
 import api.BTWAddon;
