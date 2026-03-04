@@ -24,6 +24,10 @@ repositories {
 
     // Uncomment when using Legacy Fabric API
     // maven { url = "https://maven.bawnorton.com/releases" }
+    //TODO: This should be moved to the BTW maven
+    flatDir {
+        dirs "libs"
+    }
 }
 
 loom {
@@ -39,7 +43,9 @@ btw {
 
 dependencies {
     minecraft "com.mojang:minecraft:${project.minecraft_version}"
-    mappings "btw.community:mappings:1.0.3"
+    //TODO this should be moved to the BTW maven, and will need to be published* with every BTW version.
+    // *Will have a gradle task so it can be automatically generated when it should be.
+    mappings "libs:mappings:3.0.2"
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
     // Better Than Wolves already provides a lot of hooks, but you can additionally rely on Legacy Fabric own API if you wish to.
