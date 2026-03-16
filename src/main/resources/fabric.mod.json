@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "${mod_id}",
-  "version": "${version}",
+  "version": "${version}+BTW-${btw_version}",
   "name": "${name}",
   "description": "This is an example description! Tell everyone what your mod is about!",
   "authors": [
@@ -19,8 +19,11 @@
       "dev.bagel.modid.ExampleAddon"
     ]
   },
+  "custom": {
+    "btw:addon_prefix": "EX"
+  },
   "mixins": [
-    "modid.mixins.json"
+    "${mod_id}.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=0.14.19",
