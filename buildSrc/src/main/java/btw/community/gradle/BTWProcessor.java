@@ -99,6 +99,11 @@ public class BTWProcessor implements MinecraftJarProcessor<BTWProcessor.Spec> {
         return "btw:jar";
     }
 
+    @Override
+    public @Nullable MappingsProcessor<Spec> processMappings() {
+        return BTWMappingsProcessor.INSTANCE;
+    }
+
     public static class Spec implements MinecraftJarProcessor.Spec {
         final BTWJarProvider provider;
         private Integer hashcode;
